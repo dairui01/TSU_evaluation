@@ -5,7 +5,7 @@ This code is based on the frame-based calculation for Charades and MultiThumos (
 ## Usage 
 We provide an example of the [predicted logits](https://mybox.inria.fr/f/a6f4469d3e324c7398ef/?dl=1). Please download the pickle file and put in this current folder. To run the code, please using the following command: ```python Frame_based_map.py -split CS -pkl_path ./test.pkl```
 
-This code has been tested on python 3.7, PyTorch version 1.2.
+This code has been tested on python 3.7 and PyTorch 1.2.
 
 ## Remarks
 1. This code can adapt for different temporal resolusion (frame per predicted logit), here we provide the example ```test.pkl``` is in temporal resolusion of 8. 
