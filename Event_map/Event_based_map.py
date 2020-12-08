@@ -157,7 +157,7 @@ def process(method):
     # ========== calculate protocols========
     print("================================================")
     print("evaluation for method: %s" % method)
-    print("---- for theta = %lf" % theta）
+    print("---- for theta = %lf" % theta)
     print("-------- mAP_action = ", sum([ap(a_props[x], theta, a_grounds[x]) \
                                          for x in xrange(number_label)]) / (number_label))
     print("-------- AP_action = ", [ap(a_props[x], theta, a_grounds[x]) \
