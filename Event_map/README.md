@@ -9,4 +9,4 @@ You can play with:
 ```python Event_based_map.py -pred_path ./pred -gt_path ./gt -theta 0.3```
 
 ## Remarks 
-we provide only one videos in this example, which does not cover all the activities in the dataset, thus, while doing mean for the APs, a lot of 0 will be counted.
+We provide only one videos in this example, which does not cover all the activities in the dataset, thus, while doing mean for the APs, a lot of 0 will be counted.
