@@ -57,10 +57,10 @@ def match(lst, ratio, ground):
             return 0
         return (min(e_p, e_g) - max(s_p, s_g)) / (max(e_p, e_g) - min(s_p, s_g))
 
-    cos_map = [-1 for x in xrange(len(lst))]
-    count_map = [0 for x in xrange(len(ground))]
+    cos_map = [-1 for x in range(len(lst))]
+    count_map = [0 for x in range(len(ground))]
     # generate index_map to speed up
-    index_map = [[] for x in xrange(number_label)]
+    index_map = [[] for x in range(number_label)]
     for x in xrange(len(ground)):
         index_map[int(ground[x][0])].append(x)
 
@@ -138,9 +138,9 @@ def process(method):
 
     # ========== find all proposals separated by action categories========
     # proposal list separated by class
-    a_props = [[] for x in xrange(number_label)]
+    a_props = [[] for x in range(number_label)]
     # ground-truth list separated by class
-    a_grounds = [[] for x in xrange(number_label)]
+    a_grounds = [[] for x in range(number_label)]
 
     for x in xrange(len(v_props)):
         for y in xrange(len(v_props[x])):
