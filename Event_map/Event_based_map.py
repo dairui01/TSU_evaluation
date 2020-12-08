@@ -155,16 +155,16 @@ def process(method):
     all_grounds = sum(a_grounds, [])
 
     # ========== calculate protocols========
-    print （"================================================"）
-    print （"evaluation for method: %s" % method）
-    print （"---- for theta = %lf" % theta）
-    print （"-------- mAP_action = ", sum([ap(a_props[x], theta, a_grounds[x]) \
-                                         for x in xrange(number_label)]) / (number_label)）
-    print ("-------- AP_action = ", [ap(a_props[x], theta, a_grounds[x]) \
-                                         for x in xrange(number_label)]）
-    print ("-------- mAP_video = ", sum([ap(v_props[x], theta, v_grounds[x]) \
+    print("================================================")
+    print("evaluation for method: %s" % method)
+    print("---- for theta = %lf" % theta）
+    print("-------- mAP_action = ", sum([ap(a_props[x], theta, a_grounds[x]) \
+                                         for x in xrange(number_label)]) / (number_label))
+    print("-------- AP_action = ", [ap(a_props[x], theta, a_grounds[x]) \
+                                         for x in xrange(number_label)])
+    print("-------- mAP_video = ", sum([ap(v_props[x], theta, v_grounds[x]) \
                                         for x in xrange(len(v_props))]) / len(v_props))
-    print ("===============================================")
+    print("===============================================")
     return v_props,v_grounds
 
 
