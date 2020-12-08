@@ -12,15 +12,5 @@ This code has been tested on python 3.7 and PyTorch 1.2.
 
 2. To compare with the results reported in the paper, please up-sample the predicted logits to the same temporal resolusion as the ground truth then perform the evaluation. 
 
-
-If you find this dataset useful for your research, please cite our paper:
-
-	@misc{dai2020toyota,
-      title={Toyota Smarthome Untrimmed: Real-World Untrimmed Videos for Activity Detection}, 
-      author={Rui Dai and Srijan Das and Saurav Sharma and Luca Minciullo and Lorenzo Garattoni and Francois Bremond and Gianpiero Francesca},
-      year={2020},
-      eprint={2010.14982},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
-	}
+3. The provided ```TSU_CS.json``` may have slight different to the provided CSV annotation. Please take the CSV format annoatation as the reference. 
 
