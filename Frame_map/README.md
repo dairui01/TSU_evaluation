@@ -1,6 +1,6 @@
 # Frame-based Evaluation
 
-This code is based on the frame-based calculation for Charades and MultiThumos ([Link](https://github.com/piergiaj/super-events-cvpr18/blob/master/apmeter.py)).
+This code is based on the frame-based evaluation for Charades and MultiThumos ([Link](https://github.com/piergiaj/super-events-cvpr18/blob/master/apmeter.py)).
 
 ## Usage 
 We provide an example of the predicted logits ([test.pkl](https://mybox.inria.fr/f/a6f4469d3e324c7398ef/?dl=1)). Please download the pickle file and put in this current folder. To run the code, please use the following command: ```python Frame_based_map.py -split CS -pkl_path ./test.pkl```
