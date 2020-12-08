@@ -10,5 +10,5 @@ This code has been tested on python 3.7 and PyTorch 1.2.
 ## Remarks
 1. This code can adapt for different temporal resolusion (number of frames per predicted logit), here we provide the example ```test.pkl``` is in temporal resolusion of 8. To compare with the results reported in the paper, please up-sample the predicted logits to the same temporal resolusion as the ground truth then perform the evaluation. 
 
-3. The provided ```TSU_CS.json``` may have slight different to the provided CSV annotation. Please take the CSV format annoatation as the reference. 
+3. The provided ```TSU_CS.json```may have slight difference compared to the provided CSV annotation. Please take the CSV format annoatation as the reference. 
 
