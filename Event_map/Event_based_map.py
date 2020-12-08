@@ -61,10 +61,10 @@ def match(lst, ratio, ground):
     count_map = [0 for x in range(len(ground))]
     # generate index_map to speed up
     index_map = [[] for x in range(number_label)]
-    for x in xrange(len(ground)):
+    for x in range(len(ground)):
         index_map[int(ground[x][0])].append(x)
 
-    for x in xrange(len(lst)):
+    for x in range(len(lst)):
         for y in index_map[int(lst[x][0])]:
             if (overlap(lst[x], ground[y]) < ratio): continue
             if (overlap(lst[x], ground[y]) < overlap(lst[x], ground[cos_map[x]])): continue
@@ -101,7 +101,7 @@ def ap(lst, ratio, ground):
     number_ground = len(ground)
     old_precision, old_recall = calc_pr(positive, number_proposal, number_ground)
 
-    for x in xrange(len(lst)):
+    for x in range(len(lst)):
         number_proposal -= 1;
         if (cos_map[x] == -1): continue
         count_map[cos_map[x]] -= 1;
@@ -125,11 +125,11 @@ def process(method):
     # ========== find all proposals separated by video========
     for video in os.listdir(folderpath):
         prop = open(folderpath + video, 'r').readlines()
-        prop = [prop[x].replace(",", " ") for x in xrange(len(prop))]
-        prop = [[float(y) for y in prop[x].split()] for x in xrange(len(prop))]
+        prop = [prop[x].replace(",", " ") for x in range(len(prop))]
+        prop = [[float(y) for y in prop[x].split()] for x in range(len(prop))]
         ground = open(ground_folder + video, 'r').readlines()
-        ground = [ground[x].replace(",", " ") for x in xrange(len(ground))]
-        ground = [[float(y) for y in ground[x].split()] for x in xrange(len(ground))]
+        ground = [ground[x].replace(",", " ") for x in range(len(ground))]
+        ground = [[float(y) for y in ground[x].split()] for x in range(len(ground))]
         # append video name
         for x in prop: x.append(video)
         for x in ground: x.append(video)
@@ -142,12 +142,12 @@ def process(method):
     # ground-truth list separated by class
     a_grounds = [[] for x in range(number_label)]
 
-    for x in xrange(len(v_props)):
-        for y in xrange(len(v_props[x])):
+    for x in range(len(v_props)):
+        for y in range(len(v_props[x])):
             a_props[int(v_props[x][y][0])].append(v_props[x][y])
 
-    for x in xrange(len(v_grounds)):
-        for y in xrange(len(v_grounds[x])):
+    for x in range(len(v_grounds)):
+        for y in range(len(v_grounds[x])):
             a_grounds[int(v_grounds[x][y][0])].append(v_grounds[x][y])
 
     # ========== find all proposals========
@@ -159,11 +159,11 @@ def process(method):
     print("evaluation for method: %s" % method)
     print("---- for theta = %lf" % theta)
     print("-------- mAP_action = ", sum([ap(a_props[x], theta, a_grounds[x]) \
-                                         for x in xrange(number_label)]) / (number_label))
+                                         for x in range(number_label)]) / (number_label))
     print("-------- AP_action = ", [ap(a_props[x], theta, a_grounds[x]) \
-                                         for x in xrange(number_label)])
+                                         for x in range(number_label)])
     print("-------- mAP_video = ", sum([ap(v_props[x], theta, v_grounds[x]) \
-                                        for x in xrange(len(v_props))]) / len(v_props))
+                                        for x in range(len(v_props))]) / len(v_props))
     print("===============================================")
     return v_props,v_grounds
 
